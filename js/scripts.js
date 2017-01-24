@@ -4,10 +4,11 @@ function Contact(first, last) {
   this.addresses = [];
 }
 
-function Address(street, city, state) {
+function Address(street, city, state, houseType) {
   this.street = street;
   this.city = city;
   this.state = state;
+  this.houseType = houseType;
 }
 
 Contact.prototype.fullName = function() {
@@ -64,7 +65,8 @@ $(document).ready(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
-      var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState);
+      var inputtedHouseType = $(this).find("select#address-type").val();
+      var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState, inputtedHouseType);
       newContact.addresses.push(newAddress);
     });
 
@@ -77,7 +79,7 @@ $(document).ready(function() {
       $(".last-name").text(newContact.lastName);
       $("ul#addresses").text("");
       newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.state + "</li>");
+        $("ul#addresses").append("<li>" + address.houseType + ": " + address.street + ", " + address.city + " " + address.state + "</li>");
       });
     });
 
