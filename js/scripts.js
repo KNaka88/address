@@ -83,7 +83,7 @@ $(document).ready(function() {
       });
     });
 
-
+    $(".new-address").not(":first").remove();
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
