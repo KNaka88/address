@@ -18,17 +18,24 @@ Contact.prototype.fullName = function() {
 $(document).ready(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-street">Street</label>' +
-                                    '<input type="text" class="form-control new-street">' +
-                                  '</div>' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-city">City</label>' +
-                                    '<input type="text" class="form-control new-city">' +
-                                  '</div>' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-state">State</label>' +
-                                    '<input type="text" class="form-control new-state">' +
+                                  '<div class="panel panel-info">' +
+                                    '<div class="panel-heading">'+
+                                      '<h2 class="panel-title">Address</h2>'+
+                                    '</div>'+
+                                    '<div class="panel-body">' +
+                                      '<div class="form-group">' +
+                                        '<label for="new-street">Street</label>' +
+                                        '<input type="text" class="form-control new-street">' +
+                                      '</div>' +
+                                      '<div class="form-group">' +
+                                        '<label for="new-city">City</label>' +
+                                        '<input type="text" class="form-control new-city">' +
+                                      '</div>' +
+                                      '<div class="form-group">' +
+                                        '<label for="new-state">State</label>' +
+                                        '<input type="text" class="form-control new-state">' +
+                                      '</div>' +
+                                    '</div>' +
                                   '</div>' +
                                 '</div>');
   });
